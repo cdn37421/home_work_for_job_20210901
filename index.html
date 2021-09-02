@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>課題＿陳韋良（チンイリョウ）</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://kit-pro.fontawesome.com/releases/v5.12.1/css/pro.min.css"
+    />
+    <!--start owl.carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"></link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"></link>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+     <!-- end owl.carousel -->
+   
+
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    /* button */
+    .contact{
+    background: rgb(245,148,0);
+    background: linear-gradient(90deg, rgba(245,148,0,1) 30%, rgba(252,196,25,1) 100%);
+  
+    }
+    /* section */
+    li {
+      list-style-type: none;
+    }
+
+    .section {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .section:before,
+    .section:after {
+      content: "";
+      flex: 1 1;
+      border-bottom: 0.5px solid #ccc;
+      margin: auto;
+    }
+    .section-2 {
+      display: flex;
+      flex-direction: row;
+    }
+
+    /* accordion */
+    .panel {
+  
+      display: none;
+      background-color: white;
+      overflow: hidden;
+    }
+
+    .accordion:after {
+      padding-left: 34%;
+      content: '\142F'; /* Unicode character for "plus" sign (+) */
+      font-size: 25px;
+      color: #e67700;
+      float: right;
+      margin-left: 5px;
+    }
+
+    .accordion.active:after {
+      content: '	\1431'; /* Unicode character for "plus" sign (+) */
+      font-size: 25px;
+      color: #e67700;
+      float: right;
+      margin-left: 5px;
+    }
+
+    /* media　query */
+    @media screen and (max-width: 480px) {
+      
+      .service {
+
+        grid-template-columns: repeat(1,1fr);
+      }
+    }
+
+    /* carousel */
+    .owl-theme .item {
+
+      height: 14rem;
+      width: auto;
+      background: white;
+      padding: 3rem;
+    }
+
+    .carousel-wrap {
+      margin: 35px auto;
+      padding: 0 5%;
+      width: 80%;
+      position: relative;
+    }
+
+    .owl-prev, .owl-next {
+      
+      width: 30px;
+      height: 150px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      display: block !important;
+       
+    }
+    .owl-prev { left: -40px; }
+    .owl-next { right: -40px; }
+    .owl-prev i, .owl-next i {transform : scale(1,5); color: #f08c00;}
+    
+
+    .owl-theme .owl-dots .owl-dot.active span {
+      background-color: #f08c00;
+    }
+
+  </style>
+
+  <body>
+    
+    <!-- start navbar -->
+    <div class=" p-0 bg-white flex justify-between sticky top-0 z-50">
+      <img class="items-center p-2" src="https://fakeimg.pl/150x15" alt="">
+
+      <a href="#" class="contact px-8 py-2 text-white ">
+        <i class="fal fa-envelope pr-2 "></i>contact
+      </a>
+    </div>
+    <!-- end navbar -->
+    <!-- start hero section -->
+    <div class="hero-section relative bg-opacity-75">
+      <div class="h-2/5">
+
+      
+      <img class="min-w-0 w-full h-2/5" src="https://picsum.photos/id/1/1400/500" alt="" />
+      <div
+        class="
+        container
+        flex
+        flex-col
+        justify-content-end
+        text-2xl
+        bg-black
+        text-white
+        bg-opacity-75
+        bottom-0
+        left-0
+        z-2
+        absolute
+        py-6
+        pt-8
+        pl-6
+        md:text-6xl
+        md:h-full
+        md:w-3/5
+        md:bottom-0
+        "
+      >
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit
+      </div>
+    </div>
+  </div>
+    <!-- end hero section -->
+
+    <!-- start main section -->
+
+    <div class="container mb-16">
+    <div
+      class="
+        flex flex-wrap
+        main-section
+        container
+        p-2
+        mt-8
+        justify-center
+      "
+    >
+      <img class="min-w-0 md:flex-1" src="https://fakeimg.pl/400x200/" />
+      <p class="mx-4 my-8 md:flex-1 ">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
+        repellendus ex animi voluptates ratione minus aliquid tempore inventore
+        enim quibusdam ullam facilis modi odio obcaecati architecto recusandae,
+        nisi quis debitis.
+      </p>
+    </div>
+    <button  type="button" src="#" class=" left-1/3 md:left-3/4 md:text-3xl md:text-lg text-sm bg-black text-white rounded-full px-4 py-2 mx-16 "
+    style="position: relative;
+    top: 50%;
+    transform: translate(-50%,-50%)" >
+      <a href="#">
+        <p class="inline-block px-6  hover:shadow-2xl hover:text-blue-400 ">View the Details</p>
+        <p class="inline-block ">></p>
+      </a>
+    </button>
+  </div>
+    <!-- end main section -->
+
+    <!-- start section-1 -->
+    <div class="section section-1 container mt-16">
+      <div
+        class="rounded-full h-28 w-28 flex items-center justify-center"
+        style="
+          -webkit-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.15);
+        "
+      >
+        <div class="flex flex-wrap items-center relative">
+          <li class="font-bold absolute bottom-2" style="right: -2.4rem">
+            SECTION
+          </li>
+          <li
+            class="font-bold text-yellow-500 absolute mx-2"
+            style="right: -1.65rem"
+          >
+            NO.1
+          </li>
+          <li class="absolute top-2" style="right: -1.7rem">Feature</li>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+    <!-- Accordion 1-->
+    <button class="accordion flex flex-row gap-10 mt-6 mb-6 align-items-center container context">
+      <div class="text-7xl">1</div>
+      <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h1>
+      
+    </button>
+    <div class="panel  ml-20 mb-2">
+      <p class="font-bold text-yellow-500 mt-6 mb-0">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nulla esse
+        aut in, ullam inventore!
+      </p>
+      <p class="">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam excepturi
+        saepe, doloremque quibusdam accusamus velit neque ducimus amet fugiat
+        placeat laudantium quisquam deserunt maiores hic officia nisi vitae fuga
+        temporibus.
+      </p>
+    </div>
+    <div class=" section mx-2"></div>
+
+    <!-- Accordion 2-->
+    <button class="accordion flex flex-row gap-10 mt-6 mb-6 align-items-center container context">
+      <div class="text-7xl">2</div>
+      <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h1>
+      
+    </button>
+    <div class="panel  ml-20 mb-2">
+      <p class="font-bold text-yellow-500 mt-6 mb-0">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nulla esse
+        aut in, ullam inventore!
+      </p>
+      <p class="">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam excepturi
+        saepe, doloremque quibusdam accusamus velit neque ducimus amet fugiat
+        placeat laudantium quisquam deserunt maiores hic officia nisi vitae fuga
+        temporibus.
+      </p>
+    </div>
+    <div class=" section mx-2"></div>
+    <!-- Accordion 3-->
+    <button class="accordion flex flex-row gap-10 mt-6 mb-6 align-items-center container context">
+      <div class="text-7xl">3</div>
+      <h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h1>
+      
+    </button>
+    <div class="panel  ml-20 mb-2">
+      <p class="font-bold text-yellow-500 mt-6 mb-0">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo nulla esse
+        aut in, ullam inventore!
+      </p>
+      <p class="">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam excepturi
+        saepe, doloremque quibusdam accusamus velit neque ducimus amet fugiat
+        placeat laudantium quisquam deserunt maiores hic officia nisi vitae fuga
+        temporibus.
+      </p>
+    </div>
+  </div>
+    <!-- end section-1 -->
+
+    <!-- start section-2 -->
+    <div class="relative container mt-32">
+      <div class="section section-2 container flex absolute -bottom-14 ">
+        <div
+          class="
+            bg-white
+            rounded-full
+            h-28
+            w-28
+            flex
+            items-center
+            justify-content-center
+          "
+          style="
+            -webkit-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.15);
+          "
+        >
+          <div class="flex flex-wrap items-center relative">
+            <li class="font-bold absolute bottom-2" style="right: -2.4rem">
+              SECTION
+            </li>
+            <li
+              class="font-bold text-yellow-500 absolute mx-2"
+              style="right: -1.65rem"
+            >
+              NO.2
+            </li>
+            <li class="absolute top-2" style="right: -1.7rem">Service</li>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-yellow-600 z-10 ">
+      <div class="p-10">
+        <div class="service grid grid-cols-2 gap-6 md:grid-cols-3  justify-center items-center mt-8 justify-items-center"
+        style=" @media (min-width: 440px) { grid-cols-1 !important;}">
+          <!-- card -->
+          <div class="service-card w-60">
+            <div
+              class="
+                mt-12
+                w-60
+                hover:shadow-lg hover:bg-yellow-500
+                transform
+                hover:scale-105
+                duration-200
+              "
+            >
+              <img
+                src="https://fakeimg.pl/150x150/"
+                alt=""
+                class="pt-4 pl-10"
+              />
+              <div class="service-text p-4">
+                <h3 class="text-lg text-white text-center">Lorem ipsum dolor sit </h3>
+
+                <hr class="text-white" />
+                <p class="text text-white text-center mb-0">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Ducimus rem distinctio
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end card -->
+           <!-- card -->
+           <div class="service-card w-60">
+            <div
+              class="
+                mt-12
+                w-60
+                hover:shadow-lg hover:bg-yellow-500
+                transform
+                hover:scale-105
+                duration-200
+              "
+            >
+              <img
+                src="https://fakeimg.pl/150x150/"
+                alt=""
+                class="pt-4 pl-10"
+              />
+              <div class="service-text p-4">
+                <h3 class="text-lg text-white text-center">Lorem ipsum dolor sit </h3>
+
+                <hr class="text-white" />
+                <p class="text text-white text-center mb-0">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Ducimus rem distinctio
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end card -->
+           <!-- card -->
+           <div class="service-card w-60">
+            <div
+              class="
+                mt-12
+                w-60
+                hover:shadow-lg hover:bg-yellow-500
+                transform
+                hover:scale-105
+                duration-200
+              "
+            >
+              <img
+                src="https://fakeimg.pl/150x150/"
+                alt=""
+                class="pt-4 pl-10"
+              />
+              <div class="service-text p-4">
+                <h3 class="text-lg text-white text-center">Lorem ipsum dolor sit </h3>
+
+                <hr class="text-white" />
+                <p class="text text-white text-center mb-0">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Ducimus rem distinctio
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end card -->
+           <!-- card -->
+           <div class="service-card w-60">
+            <div
+              class="
+                mt-12
+                w-60
+                hover:shadow-lg hover:bg-yellow-500
+                transform
+                hover:scale-105
+                duration-200
+              "
+            >
+              <img
+                src="https://fakeimg.pl/150x150/"
+                alt=""
+                class="pt-4 pl-10"
+              />
+              <div class="service-text p-4">
+                <h3 class="text-lg text-white text-center">Lorem ipsum dolor sit </h3>
+
+                <hr class="text-white" />
+                <p class="text text-white text-center mb-0">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Ducimus rem distinctio
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end card -->
+           <!-- card -->
+           <div class="service-card w-60">
+            <div
+              class="
+                mt-12
+                w-60
+                hover:shadow-lg hover:bg-yellow-500
+                transform
+                hover:scale-105
+                duration-200
+              "
+            >
+              <img
+                src="https://fakeimg.pl/150x150/"
+                alt=""
+                class="pt-4 pl-10"
+              />
+              <div class="service-text p-4">
+                <h3 class="text-lg text-white text-center">Lorem ipsum dolor sit </h3>
+
+                <hr class="text-white" />
+                <p class="text text-white text-center mb-0">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Ducimus rem distinctio
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end card -->
+           <!-- card -->
+           <div class="service-card w-60">
+            <div
+              class="
+                mt-12
+                w-60
+                hover:shadow-lg hover:bg-yellow-500
+                transform
+                hover:scale-105
+                duration-200
+              "
+            >
+              <img
+                src="https://fakeimg.pl/150x150/"
+                alt=""
+                class="pt-4 pl-10"
+              />
+              <div class="service-text p-4">
+                <h3 class="text-lg text-white text-center">Lorem ipsum dolor sit </h3>
+
+                <hr class="text-white" />
+                <p class="text text-white text-center mb-0">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Ducimus rem distinctio
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end card -->
+           <!-- card -->
+           <div class="service-card w-60">
+            <div
+              class="
+                mt-12
+                w-60
+                hover:shadow-lg hover:bg-yellow-500
+                transform
+                hover:scale-105
+                duration-200
+              "
+            >
+              <img
+                src="https://fakeimg.pl/150x150/"
+                alt=""
+                class="pt-4 pl-10"
+              />
+              <div class="service-text p-4">
+                <h3 class="text-lg text-white text-center">Lorem ipsum dolor sit </h3>
+
+                <hr class="text-white" />
+                <p class="text text-white text-center mb-0">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Ducimus rem distinctio
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end card -->
+           <!-- card -->
+           <div class="service-card w-60">
+            <div
+              class="
+                mt-12
+                w-60
+                hover:shadow-lg hover:bg-yellow-500
+                transform
+                hover:scale-105
+                duration-200
+              "
+            >
+              <img
+                src="https://fakeimg.pl/150x150/"
+                alt=""
+                class="pt-4 pl-10"
+              />
+              <div class="service-text p-4">
+                <h3 class="text-lg text-white text-center">Lorem ipsum dolor sit </h3>
+
+                <hr class="text-white" />
+                <p class="text text-white text-center mb-0">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Ducimus rem distinctio
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end card -->
+           <!-- card -->
+           <div class="service-card w-60">
+            <div
+              class="
+                mt-12
+                w-60
+                hover:shadow-lg hover:bg-yellow-500
+                transform
+                hover:scale-105
+                duration-200
+              "
+            >
+              <img
+                src="https://fakeimg.pl/150x150/"
+                alt=""
+                class="pt-4 pl-10"
+              />
+              <div class="service-text p-4">
+                <h3 class="text-lg text-white text-center">Lorem ipsum dolor sit </h3>
+
+                <hr class="text-white" />
+                <p class="text text-white text-center mb-0">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Ducimus rem distinctio
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- end card -->
+        </div>
+      </div>
+    </div>
+    <!-- end section-2 -->
+
+    <!-- start section-research -->
+    <div class="bg-gray-200 pt-4">
+      <div class="section section-research container">
+        <div
+          class="
+            rounded-full
+            h-28
+            w-28
+            flex
+            items-center
+            justify-center
+            bg-black
+          "
+          style="
+            -webkit-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.15);
+          "
+        >
+          <div class="flex flex-wrap items-center relative">
+            <li
+              class="font-bold text-xl absolute bottom-2 text-white"
+              style="right: -1.8rem"
+            >
+              Ponta
+            </li>
+            <li
+              class="font-bold text-xl text-yellow-500 absolute mx-2"
+              style="right: -3.9rem"
+            >
+              RESEARCH
+            </li>
+            <li
+              class="absolute top-2 text-white text-xl lh-1"
+              style="right: -1.4rem; writing-mode: vertical-lr; top: 1.2rem"
+            >
+              事例
+            </li>
+          </div>
+        </div>
+      </div>
+      <!-- start carousel -->
+      <div class="carousel-wrap  p-0">
+
+        <div class="owl-carousel owl-theme">
+          <!-- card 1 -->
+          <div class="item bg-white rounded-2xl shadow-xl text-center py-6 px-2">
+            <p class="text-xl  text-black">サービス事例
+            </ｐ>
+            <hr class="mx-auto mb-2 " style="height:5px; width:35%; text-align:center; background-color: #e67700;">
+           <p class="mb-0"> 購買分析</p>
+           <p class="mb-0">ｘ</p>
+           <p> インターネット
+            リサーチ</p>
+          </div>
+         <!-- end -->
+          <!-- card 2 -->
+          <div class="item bg-white rounded-2xl shadow-xl text-center py-6 px-2">
+            <p class="text-xl  text-black">業態別事例
+            </ｐ>
+            <hr class="mx-auto mb-2" style="height:5px; width:35%; text-align:center; background-color: #e67700;">
+           <p class="mb-0"> 食品メーカー</p>
+           
+          </div>
+         <!-- end -->
+         <!-- card 3 -->
+         <div class="item bg-white rounded-2xl shadow-xl text-center py-6 px-2">
+          <p class="text-xl  text-black">業態別事例
+          <hr class="mx-auto mb-2" style="height:5px; width:35%; text-align:center; background-color: #e67700;">
+         <p class="mb-0"> 小売店</p>
+         <p class="mb-0">ｘ</p>
+         <p> インターネット
+          リサーチ</p>
+        </div>
+       <!-- end -->
+       <!-- card 4 -->
+       <div class="item bg-white rounded-2xl shadow-xl text-center py-6 px-2">
+        <p class="text-xl  text-black">サービス事例
+        </ｐ>
+        <hr class="mx-auto mb-2 " style="height:5px; width:35%; text-align:center; background-color: #e67700;">
+       <p class="mb-0"> 購買分析</p>
+       <p class="mb-0">ｘ</p>
+       <p> インターネット
+        リサーチ</p>
+      </div>
+     <!-- end -->
+      <!-- card 5 -->
+      <div class="item bg-white rounded-2xl shadow-xl text-center py-6 px-2">
+        <p class="text-xl  text-black">業態別事例
+        </ｐ>
+        <hr class="mx-auto mb-2" style="height:5px; width:35%; text-align:center; background-color: #e67700;">
+       <p class="mb-0"> 食品メーカー</p>
+       
+      </div>
+     <!-- end -->
+     <!-- card 6 -->
+     <div class="item bg-white rounded-2xl shadow-xl text-center py-6 px-2">
+      <p class="text-xl  text-black">業態別事例
+      <hr class="mx-auto mb-2" style="height:5px; width:35%; text-align:center; background-color: #e67700;">
+     <p class="mb-0"> 小売店</p>
+     <p class="mb-0">ｘ</p>
+     <p> インターネット
+      リサーチ</p>
+    </div>
+   <!-- end -->
+     <!-- end -->
+        </div>
+      </div>
+      <!-- end carousel -->
+    </div>
+    <!-- end section-research -->
+
+    <!-- start contact-section -->
+    <div class="contact-section container flex flex-col px-10 pb-16 items-center">
+      <p class="text-2xl text-center p-2">Lorem ipsum dolor sit amet</p>
+          <a href="#" class="contact text-center max-w-5xl  bg-yellow-300 shadow-2xl px-26 py-2 w-3/5 hover:bg-yellow-700 hover:scale-110">  CONTACT<a>
+    </div>
+    <!-- end contact-section -->
+
+     <!-- start footer -->
+      <footer class="bg-black pt-2 pb-4">
+       <ul class="nav text-white flex justify-content-center gap-4 px-10 ">
+         <li class="nav-item">Company </li>
+         <li class="nav-item">| </li>
+         <li class="nav-item">Privacy Policy</li>
+         <li class="nav-item">| </li>
+         <li class="nav-item">Recruit</li>
+      </ul>
+        <p class=" copyright text-white text-sm text-center">©Copyright All Rights Reserved </p>
+      </footer>
+    <!-- end footer -->
+  </body>
+
+  <script>
+    //  start accordion //
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+  
+    for (i = 0; i < acc.length; i++) {
+      
+      acc[i].addEventListener("click", function () {
+        /* Toggle between hiding and showing the active panel */
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+    // end accordion //
+
+    //owl-carousel//
+      $(".owl-carousel").owlCarousel({
+        autoplay:true,
+        loop: true, 
+        margin: 15, 
+        dots: true,
+        responsiveClass:true,
+        singleItem : true,
+        nav: true, 
+        responsive: {
+          0: {
+            items: 1 
+          },
+          300: {
+            items: 2 
+          },
+          1000: {
+            items: 3
+          },
+          navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+        }
+      });
+    //owl-carousel//
+  </script>
+</html>
